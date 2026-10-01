@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Montserrat:wght@300;400;500&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(circle at top, #fff5f7, #fce7ed 45%, #f8d7e0);
+
+    color: #6b3d4b;
+
+    font-family: 'Montserrat', sans-serif;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   TELAS
+========================= */
+
+.tela {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+}
+
+
+/* =========================
+   TELA INICIAL
+========================= */
+
+.inicial {
+    text-align: center;
+
+    animation: aparecer 1.5s ease;
+}
+
+
+.coracao {
+    font-family: 'Caveat', cursive;
+
+    font-size: 90px;
+
+    color: #d66b86;
+
+    animation: pulsar 2s infinite;
+}
+
+
+.pequeno {
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    color: #9b6877;
+
+    margin-bottom: 20px;
+}
+
+
+.inicial h1 {
+    font-family: 'Caveat', cursive;
+
+    font-size: clamp(50px, 9vw, 90px);
+
+    font-weight: 500;
+
+    line-height: 0.95;
+
+    color: #713f4d;
+
+    margin-bottom: 45px;
+}
+
+
+button {
+    border: none;
+
+    background: #d66b86;
+
+    color: white;
+
+    padding: 16px 32px;
+
+    border-radius: 50px;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    box-shadow: 0 10px 25px rgba(150, 70, 90, 0.2);
+
+    transition: 0.3s;
+}
+
+
+button:hover {
+    transform: translateY(-3px);
+
+    background: #c85c78;
+
+    box-shadow: 0 15px 30px rgba(150, 70, 90, 0.3);
+}
+
+
+/* =========================
+   CARTA
+========================= */
+
+.carta {
+    text-align: center;
+
+    max-width: 850px;
+
+    margin: auto;
+
+    padding-top: 80px;
+
+    padding-bottom: 80px;
+}
+
+
+.escondida {
+    display: none;
+}
+
+
+.coracoes {
+    color: #d66b86;
+
+    font-size: 22px;
+
+    margin-bottom: 20px;
+}
+
+
+.introducao {
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 3px;
+
+    color: #a36b7a;
+
+    margin-bottom: 15px;
+}
+
+
+.carta h1 {
+    font-family: 'Caveat', cursive;
+
+    font-size: clamp(50px, 8vw, 75px);
+
+    font-weight: 500;
+
+    color: #713f4d;
+
+    margin-bottom: 45px;
+}
+
+
+.mensagem {
+    width: min(680px, 100%);
+
+    margin: auto;
+
+    padding: 45px;
+
+    background: rgba(255, 255, 255, 0.65);
+
+    border: 1px solid rgba(180, 100, 120, 0.15);
+
+    border-radius: 25px;
+
+    box-shadow: 0 20px 50px rgba(130, 60, 80, 0.1);
+
+    text-align: left;
+
+    font-family: 'Caveat', cursive;
+
+    font-size: 27px;
+
+    line-height: 1.6;
+
+    color: #704653;
+}
+
+
+.mensagem p {
+    margin-bottom: 25px;
+}
+
+
+.assinatura {
+    margin-top: 40px;
+
+    font-family: 'Caveat', cursive;
+
+    font-size: 25px;
+
+    line-height: 1.2;
+
+    color: #8b5362;
+}
+
+
+.assinatura span {
+    font-size: 34px;
+
+    color: #d05f7b;
+}
+
+
+.final {
+    margin-top: 60px;
+
+    font-size: 35px;
+
+    color: #d66b86;
+}
+
+
+/* =========================
+   ANIMAÇÕES
+========================= */
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes pulsar {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+    .tela {
+        padding: 25px;
+    }
+
+    .mensagem {
+        padding: 30px 25px;
+
+        font-size: 24px;
+    }
+
+    .inicial h1 {
+        font-size: 58px;
+    }
+
+}

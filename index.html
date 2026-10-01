@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Para o meu amor ♡</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 30px 20px;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            color: #49634d;
+
+            background:
+                radial-gradient(
+                    circle at 15% 15%,
+                    rgba(180, 210, 185, 0.45),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 85% 85%,
+                    rgba(220, 235, 218, 0.7),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    135deg,
+                    #f4f8f1,
+                    #e4eee0,
+                    #f8faf5
+                );
+
+            overflow-x: hidden;
+        }
+
+        /* CARTA */
+
+        .container {
+            width: 100%;
+            max-width: 700px;
+
+            padding: 55px 50px;
+
+            background: rgba(255, 255, 255, 0.92);
+
+            border: 1px solid #c7d8c5;
+
+            border-radius: 28px;
+
+            box-shadow:
+                0 15px 50px rgba(58, 91, 63, 0.15);
+
+            position: relative;
+
+            z-index: 2;
+
+            animation: aparecer 1.2s ease;
+        }
+
+        /* TOPO */
+
+        .topo {
+            text-align: center;
+
+            margin-bottom: 35px;
+        }
+
+        .coracao {
+            font-size: 42px;
+
+            color: #719676;
+
+            margin-bottom: 15px;
+
+            animation: pulsar 2s infinite;
+        }
+
+        .topo h1 {
+            font-size: 36px;
+
+            font-weight: normal;
+
+            color: #557b5b;
+
+            margin-bottom: 12px;
+        }
+
+        .topo p {
+            font-size: 15px;
+
+            color: #78927b;
+
+            font-style: italic;
+        }
+
+        /* CARTA */
+
+        .carta {
+            font-size: 18px;
+
+            line-height: 1.9;
+
+            color: #4f6552;
+
+            text-align: left;
+        }
+
+        .carta p {
+            margin-bottom: 25px;
+        }
+
+        /* ASSINATURA */
+
+        .assinatura {
+            margin-top: 35px;
+
+            text-align: right;
+
+            font-size: 18px;
+
+            line-height: 1.7;
+
+            color: #607763;
+        }
+
+        .assinatura span {
+            color: #557b5b;
+
+            font-size: 21px;
+
+            font-style: italic;
+        }
+
+        /* FINAL */
+
+        .final {
+            margin-top: 35px;
+
+            text-align: center;
+
+            font-size: 38px;
+
+            color: #719676;
+
+            animation: pulsar 2s infinite;
+        }
+
+        /* BOTÃO */
+
+        .abrir {
+            display: flex;
+
+            justify-content: center;
+
+            margin-top: 30px;
+        }
+
+        button {
+            border: none;
+
+            padding: 15px 30px;
+
+            border-radius: 30px;
+
+            background: #789b7c;
+
+            color: white;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 16px;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 5px 15px rgba(77, 112, 82, 0.2);
+
+            transition:
+                background 0.2s,
+                transform 0.2s;
+        }
+
+        button:hover {
+            background: #5f8364;
+
+            transform: translateY(-3px);
+        }
+
+        /* CONTEÚDO ESCONDIDO */
+
+        #conteudo {
+            display: none;
+        }
+
+        #conteudo.visivel {
+            display: block;
+
+            animation: aparecer 1.2s ease;
+        }
+
+        /* MÚSICA */
+
+        .musica {
+            text-align: center;
+
+            margin-top: 25px;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 12px;
+
+            color: #78927b;
+        }
+
+        /* CORAÇÕES FLUTUANTES */
+
+        .coracao-flutuante {
+            position: fixed;
+
+            bottom: -40px;
+
+            color: #8faf91;
+
+            pointer-events: none;
+
+            z-index: 1;
+
+            animation: flutuar linear forwards;
+        }
+
+        /* ANIMAÇÕES */
+
+        @keyframes aparecer {
+
+            from {
+                opacity: 0;
+
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+
+                transform: translateY(0);
+            }
+
+        }
+
+        @keyframes pulsar {
+
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.12);
+            }
+
+        }
+
+        @keyframes flutuar {
+
+            to {
+                transform:
+                    translateY(-110vh)
+                    rotate(25deg);
+
+                opacity: 0;
+            }
+
+        }
+
+        /* CELULAR */
+
+        @media (max-width: 600px) {
+
+            body {
+                padding: 18px 12px;
+            }
+
+            .container {
+                padding: 40px 25px;
+
+                border-radius: 22px;
+            }
+
+            .topo h1 {
+                font-size: 29px;
+            }
+
+            .carta {
+                font-size: 16px;
+
+                line-height: 1.85;
+            }
+
+            .assinatura {
+                font-size: 16px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <main class="container">
+
+
+        <!-- CABEÇALHO -->
+
+        <div class="topo">
+
+            <div class="coracao">
+                ♡
+            </div>
+
+            <h1>
+                Meu amor,
+            </h1>
+
+            <p>
+                Fiz uma coisa pra você...
+            </p>
+
+        </div>
+
+
+        <!-- BOTÃO -->
+
+        <div class="abrir" id="botaoArea">
+
+            <button onclick="abrirCarta()">
+                Abre aqui hihihihi ♡
+            </button>
+
+        </div>
+
+
+        <!-- CONTEÚDO DA CARTA -->
+
+        <div id="conteudo">
+
+
+            <div class="carta">
+
+
+                <p>
+                    Meu amor,
+                </p>
+
+                <p>
+                    Quero que saiba que te quero como nunca quis ninguém, 
+                    e que você me faz feliz de formas que eu sinceramente achei que fossem impossíveis.
+                    Seu amor me cura, me faz apaixonar cada dia mais um pouco. E meu Deus, como você é apaixonante...
+                    Cada pequena característica sua é um infinito dentro da sua beleza, tanto por dentro quanto por fora.
+                    Eu te devoro, te idolatro, te venero, em conjunto te sinto e te quero. 
+                    Te amar é fácil, embora não seja simples. Essa complexidade do teu amor é única, é linda, é sua.
+                    Assim como sou sua e quero pra sempre ser. 
+                    Amo você, quero você, e sou sua. E sempre serei.
+                    Deixo aqui uma citação de tati bernardi:
+
+                    "Eu descobri que vale a pena ficar 3 horas te olhando sentada num sofá 
+                    mesmo que o dia esteja explodindo lá fora. 
+                    E quando já não sei mais o que sentir por você, 
+                    eu respiro fundo perto da sua nuca e começo a querer coisas que nem sabia que existiam…
+                    Você me transformou no eufemismo de mim mesma…
+                    Você diz que me quer com todas as minhas vírgulas,
+                    eu te quero como meu ponto final."
+
+                    Te quero como meu ponto final porque não quero que nada além de você me aconteça. 
+                    Quero as coisas boas e ruins com você. Quero a segurança de estar ao seu lado, e nele viver todo o meu futuro. 
+                    Quero que em mim você encontre refúgio e companhia, que você tenha em mim também a segurança que eu tenho em ti, 
+                    e juro em tudo, por tudo, com tudo, te fazer feliz
+                    de novo
+                    de novo
+                    e de novo.
+                </p>
+
+
+                <p>
+                    Com todo meu amor, para meu grande amor, ♡
+                </p>
+
+
+            </div>
+
+
+            <div class="assinatura">
+
+                Sua,<br>
+
+                <span>
+                    Lys ♡
+                </span>
+
+            </div>
+
+
+            <div class="final">
+                ♡
+            </div>
+
+
+            <div class="musica" id="statusMusica">
+                ♪ Essa música diz tudo... ♡
+            </div>
+
+
+        </div>
+
+
+        <!-- MÚSICA -->
+
+        <audio
+            id="musica"
+            src="musica.mp3"
+            loop
+            preload="auto">
+        </audio>
+
+
+    </main>
+
+
+    <script>
+
+
+        function abrirCarta() {
+
+
+            const conteudo =
+                document.getElementById("conteudo");
+
+
+            const botaoArea =
+                document.getElementById("botaoArea");
+
+
+            const musica =
+                document.getElementById("musica");
+
+
+            const status =
+                document.getElementById("statusMusica");
+
+
+            /* MOSTRA A CARTA */
+
+            conteudo.classList.add("visivel");
+
+
+            /* ESCONDE O BOTÃO */
+
+            botaoArea.style.display = "none";
+
+
+            /* COMEÇA A MÚSICA */
+
+            musica.play()
+
+                .then(() => {
+
+                    status.textContent =
+                        "♪ tocando uma música para você ♡";
+
+                })
+
+                .catch(() => {
+
+                    status.textContent =
+                        "♡";
+
+                });
+
+
+            /* COMEÇA A ANIMAÇÃO */
+
+            criarCoracoes();
+
+
+            setInterval(
+                criarCoracoes,
+                1800
+            );
+
+        }
+
+
+        function criarCoracoes() {
+
+
+            const coracoes = [
+                "♡",
+                "♥",
+                "❤",
+                "୨୧"
+            ];
+
+
+            for (let i = 0; i < 3; i++) {
+
+
+                const coracao =
+                    document.createElement("span");
+
+
+                coracao.className =
+                    "coracao-flutuante";
+
+
+                coracao.textContent =
+                    coracoes[
+                        Math.floor(
+                            Math.random() *
+                            coracoes.length
+                        )
+                    ];
+
+
+                coracao.style.left =
+                    Math.random() * 100 + "vw";
+
+
+                coracao.style.fontSize =
+                    (16 + Math.random() * 20) + "px";
+
+
+                coracao.style.animationDuration =
+                    (5 + Math.random() * 4) + "s";
+
+
+                document.body.appendChild(
+                    coracao
+                );
+
+
+                coracao.addEventListener(
+                    "animationend",
+                    () => {
+
+                        coracao.remove();
+
+                    }
+                );
+
+            }
+
+        }
+
+
+    </script>
+
+
+</body>
+</html>
